@@ -21,6 +21,7 @@ int division(int a, int b)
     if (b == 0)
     {
         cout << "Division by 0 is not valid" << endl;
+        return 0;
     }
     else
     {
@@ -44,12 +45,14 @@ int main()
         cout << "Enter the choice from above : ";
         cin >> user_operation;
 
+         int a, b;
+
         switch (user_operation)
         {
 
         case 1:
             /* code */
-            int a, b;
+           
             cout << "Enter two numbers : ";
             cin >> a >> b;
             cout << "The result of " << a << "+" << b << " is : " << addition(a, b);
@@ -89,6 +92,6 @@ int main()
             break;
         }
 
-        return 0;
     }
+    return 0;
 }
