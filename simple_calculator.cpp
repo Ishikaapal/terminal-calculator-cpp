@@ -1,22 +1,22 @@
 #include <iostream>
 using namespace std;
 
-int addition(int a, int b)
+float addition(float a, float b)
 {
     return a + b;
 }
 
-int subtraction(int a, int b)
+float subtraction(float a, float b)
 {
     return a - b;
 }
 
-int multiplication(int a, int b)
+float multiplication(float a, float b)
 {
     return a * b;
 }
 
-int division(int a, int b)
+float division(float a, float b)
 {
     if (b == 0)
     {
@@ -28,70 +28,62 @@ int division(int a, int b)
         return a / b;
     }
 }
-int main()
+
+int main()  // ✅ Correct return type
 {
     bool condition = true;
 
     while (condition)
     {
-        cout << "*** Simple Calculator ***" << endl;
+        cout << "\n*** Simple Calculator ***" << endl;
         cout << "1. Addition " << endl;
         cout << "2. Subtraction " << endl;
         cout << "3. Multiplication " << endl;
         cout << "4. Division " << endl;
         cout << "5. Exit" << endl;
 
-        int user_operation;
+        int user_operation;  // ✅ Correct type
         cout << "Enter the choice from above : ";
         cin >> user_operation;
 
-         int a, b;
+        float a, b;
 
         switch (user_operation)
         {
-
         case 1:
-            /* code */
-           
             cout << "Enter two numbers : ";
             cin >> a >> b;
-            cout << "The result of " << a << "+" << b << " is : " << addition(a, b);
+            cout << "The result of " << a << " + " << b << " is : " << addition(a, b) << endl;
             break;
 
         case 2:
-            /* code */
-            // int a , b;
             cout << "Enter two numbers : ";
             cin >> a >> b;
-            cout << "The result of " << a << "-" << b << " is : " << subtraction(a, b);
+            cout << "The result of " << a << " - " << b << " is : " << subtraction(a, b) << endl;
             break;
 
         case 3:
-            /* code */
-            // int a , b;
             cout << "Enter two numbers : ";
             cin >> a >> b;
-            cout << "The result of " << a << "*" << b << " is : " << multiplication(a, b);
+            cout << "The result of " << a << " * " << b << " is : " << multiplication(a, b) << endl;
             break;
 
         case 4:
-            /* code */
-            // int a , b;
             cout << "Enter two numbers : ";
             cin >> a >> b;
-            cout << "The result of " << a << "/" << b << " is : " << division(a, b);
+            cout << "The result of " << a << " / " << b << " is : " << division(a, b) << endl;
             break;
 
         case 5:
-            /* code */
             condition = false;
+            cout << "Thank you for using the calculator!" << endl;
             break;
 
         default:
-            cout<<"Invalid choice , choose from the above."<<endl;
+            cout << "Invalid choice, please choose from the above options." << endl;
             break;
         }
-
     }
+
     return 0;
 }
